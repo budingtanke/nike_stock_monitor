@@ -1,0 +1,211 @@
+2020-08-13 09:00:02.311259
+This color is unavailable.
+2020-08-13 09:37:13.042338
+size 5 is in stock.
+size 5.5 is sold out.
+size 6.0 is sold out.
+size 6.5 is in stock.
+size 7.0 is sold out.
+size 7.5 is in stock.
+size 8.0 is sold out.
+size 8.5 is in stock.
+size 9.0 is sold out.
+size 9.5 is in stock.
+size 10.0 is in stock.
+size 10.5 is in stock.
+size 11.0 is in stock.
+size 11.5 is in stock.
+size 12.0 is in stock.
+2020-08-13 09:40:00.631858
+size 5 is in stock.
+size 5.5 is sold out.
+size 6.0 is sold out.
+size 6.5 is in stock.
+size 7.0 is sold out.
+size 7.5 is in stock.
+size 8.0 is sold out.
+size 8.5 is in stock.
+size 9.0 is sold out.
+size 9.5 is in stock.
+size 10.0 is in stock.
+size 10.5 is in stock.
+size 11.0 is in stock.
+size 11.5 is in stock.
+size 12.0 is in stock.
+2020-08-13 10:30:02.108082
+size 5 is in stock.
+size 5.5 is sold out.
+size 6.0 is sold out.
+size 6.5 is in stock.
+size 7.0 is sold out.
+size 7.5 is in stock.
+size 8.0 is sold out.
+size 8.5 is in stock.
+size 9.0 is sold out.
+size 9.5 is in stock.
+size 10.0 is in stock.
+size 10.5 is in stock.
+size 11.0 is in stock.
+size 11.5 is in stock.
+size 12.0 is in stock.
+2020-08-13 11:30:01.968389
+size 5 is in stock.
+size 5.5 is sold out.
+size 6.0 is sold out.
+size 6.5 is in stock.
+size 7.0 is sold out.
+size 7.5 is in stock.
+size 8.0 is sold out.
+size 8.5 is in stock.
+size 9.0 is sold out.
+size 9.5 is in stock.
+size 10.0 is in stock.
+size 10.5 is in stock.
+size 11.0 is in stock.
+size 11.5 is in stock.
+size 12.0 is in stock.
+2020-08-13 14:30:03.057061
+size 5 is in stock.
+size 5.5 is sold out.
+size 6.0 is sold out.
+size 6.5 is in stock.
+size 7.0 is sold out.
+size 7.5 is in stock.
+size 8.0 is sold out.
+size 8.5 is in stock.
+size 9.0 is sold out.
+size 9.5 is in stock.
+size 10.0 is in stock.
+size 10.5 is in stock.
+size 11.0 is in stock.
+size 11.5 is in stock.
+size 12.0 is in stock.
+2020-08-13 17:30:08.713545
+size 5 is in stock.
+size 5.5 is sold out.
+size 6.0 is sold out.
+size 6.5 is sold out.
+size 7.0 is sold out.
+size 7.5 is sold out.
+size 8.0 is sold out.
+size 8.5 is in stock.
+size 9.0 is sold out.
+size 9.5 is in stock.
+size 10.0 is in stock.
+size 10.5 is in stock.
+size 11.0 is in stock.
+size 11.5 is in stock.
+size 12.0 is in stock.
+2020-08-13 18:30:02.511307
+size 5 is in stock.
+size 5.5 is sold out.
+size 6.0 is sold out.
+size 6.5 is sold out.
+size 7.0 is sold out.
+size 7.5 is sold out.
+size 8.0 is sold out.
+size 8.5 is in stock.
+size 9.0 is sold out.
+size 9.5 is in stock.
+size 10.0 is in stock.
+size 10.5 is in stock.
+size 11.0 is in stock.
+size 11.5 is in stock.
+size 12.0 is in stock.
+2020-08-13 20:30:01.666190
+size 5 is in stock.
+size 5.5 is sold out.
+size 6.0 is sold out.
+size 6.5 is sold out.
+size 7.0 is sold out.
+size 7.5 is sold out.
+size 8.0 is sold out.
+size 8.5 is in stock.
+size 9.0 is sold out.
+size 9.5 is in stock.
+size 10.0 is in stock.
+size 10.5 is in stock.
+size 11.0 is in stock.
+size 11.5 is in stock.
+size 12.0 is in stock.
+
+ 2020-08-13 21:40:01.704462
+This color is unavailable.
+Traceback (most recent call last):
+  File "/Users/linhan/Desktop/Han/Learning/Project/Restock Alert/main.py", line 18, in checkStock
+    size_result = driver.find_element_by_xpath(xpath_OfFirstSize).value_of_css_property('background-color')
+NameError: name 'xpath_OfFirstSize' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/linhan/Desktop/Han/Learning/Project/Restock Alert/main.py", line 44, in send_email
+    smtp.login(email_address, email_password)
+  File "/Users/linhan/opt/anaconda3/lib/python3.7/smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "/Users/linhan/opt/anaconda3/lib/python3.7/smtplib.py", line 638, in auth
+    authobject(challenge).encode('ascii'), eol='')
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/linhan/Desktop/Han/Learning/Project/Restock Alert/main.py", line 55, in <module>
+    checkStock(url, actual_size, email)
+  File "/Users/linhan/Desktop/Han/Learning/Project/Restock Alert/main.py", line 30, in checkStock
+    send_email('Nike Stock Alert', result, email)
+  File "/Users/linhan/Desktop/Han/Learning/Project/Restock Alert/main.py", line 46, in send_email
+    smtp.send_message(msg)
+  File "/Users/linhan/opt/anaconda3/lib/python3.7/smtplib.py", line 280, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+
+ 2020-08-13 21:47:36.579508
+This color is unavailable.
+
+ 2020-08-13 22:00:02.321255
+This color is unavailable.
+Traceback (most recent call last):
+  File "/Users/linhan/Desktop/Han/Learning/Project/Restock Alert/main.py", line 18, in checkStock
+    size_result = driver.find_element_by_xpath(xpath).value_of_css_property('background-color')
+  File "/Users/linhan/opt/anaconda3/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "/Users/linhan/opt/anaconda3/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "/Users/linhan/opt/anaconda3/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Users/linhan/opt/anaconda3/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="buyTools"]/div[1]/fieldset/div/div[4.0]/label"}
+  (Session info: chrome=84.0.4147.125)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/linhan/Desktop/Han/Learning/Project/Restock Alert/main.py", line 44, in send_email
+    smtp.login(email_address, email_password)
+  File "/Users/linhan/opt/anaconda3/lib/python3.7/smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "/Users/linhan/opt/anaconda3/lib/python3.7/smtplib.py", line 638, in auth
+    authobject(challenge).encode('ascii'), eol='')
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/linhan/Desktop/Han/Learning/Project/Restock Alert/main.py", line 55, in <module>
+    checkStock(url, actual_size, email)
+  File "/Users/linhan/Desktop/Han/Learning/Project/Restock Alert/main.py", line 30, in checkStock
+    send_email('Nike Stock Alert', result, email)
+  File "/Users/linhan/Desktop/Han/Learning/Project/Restock Alert/main.py", line 46, in send_email
+    smtp.send_message(msg)
+  File "/Users/linhan/opt/anaconda3/lib/python3.7/smtplib.py", line 280, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+
+ 2020-08-13 22:21:42.466356
+This color is unavailable.
+
+ 2020-08-13 22:30:01.590346
+This color is unavailable.
